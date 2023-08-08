@@ -109,11 +109,27 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-  await Product.destroy({
-    where :{
-      id: req.paramas.id
-    }
-  });
+  try {
+    const productId = req.params.id;
+
+    await ProductTag.destroy({
+      where: {
+        product_id: productId
+      }
+    });
+
+    // Now you can safely delete the Product
+    await Product.destroy({
+      where: {
+        id: productId
+      }
+    });
+
+    res.status(200).send("Product Successfully Deleted!");
+  } catch (error) {
+    res.status(400).json(error);
+  }
 });
+
 
 module.exports = router;
