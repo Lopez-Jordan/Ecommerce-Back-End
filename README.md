@@ -5,7 +5,7 @@
 
 ## Description
 For this project, I was created a back end for an Ecommerce website. Using the popular Object Relation Mapper, Sequelize, I created
-differene api endpoints that correspond with the normal CRUD (create, read, update and delete) operations. This project motivated me because I am now able to make a connect a front end with a back end that completes the full stack requirements!
+differene api endpoints that correspond with the normal CRUD (create, read, update and delete) operations. This project motivated me because I am now able to connect a front end with a back end that completes the full stack requirements!
 
 
 ## Installation
